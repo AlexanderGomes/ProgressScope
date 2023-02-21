@@ -8,7 +8,7 @@
   position: relative;
   align-items: center;
   justify-content: space-between;
-  top: 70px;
+  top: 50px;
 }
 
 .wel__heroImage {
@@ -16,15 +16,16 @@
 }
 
 .wel__textBlock {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    padding: 10px;
-    gap: 10px;
-  }
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 10px;
+  gap: 20px;
+  margin-left: 100px;
+}
 
 .textBlock__h1 {
-  font-size: 30px;
+  font-size: 55px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #25318d;
@@ -43,4 +44,126 @@
   border-radius: 12px;
   border: none;
   cursor: pointer;
+}
+
+.wel__image {
+  position: relative;
+  top: -30px;
+  margin-right: 90px;
+}
+
+@media screen and (max-width: 1260px) {
+  .textBlock__h1 {
+    font-size: 55px;
+  }
+
+  .wel__image {
+    margin-right: 20px;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .textBlock__h1 {
+    font-size: 45px;
+  }
+
+  .wel__image {
+    margin-right: 20px;
+    top: 0;
+  }
+
+  .wel__heroImage {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .textBlock__h1 {
+    font-size: 35px;
+  }
+
+  .wel__textBlock {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 10px;
+    gap: 20px;
+    margin-left: 50px;
+  }
+
+  .wel__heroImage {
+    margin-top: 20px;
+    width: 380px;
+  }
+
+  .wel__info {
+    flex-direction: column;
+  }
+
+  .wel__main {
+    background-color: #384ad321;
+    height: 90vh;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wel__heroImage {
+    position: relative;
+    margin-top: 0;
+    width: 290px;
+  }
+
+  .wel__image {
+    top: 0;
+  }
+
+  .textBlock__h1 {
+    font-size: 29px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: #25318d;
+  }
+
+  .textBlock__p {
+    font-size: 17px;
+    color: #4f4f4f;
+  }
+
+  .wel__textBlock {
+    margin-left: 15px;
+  }
+
+  .wel__main {
+    background-color: #384ad321;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  
+  .wel__textBlock {
+    margin-left: 20px;
+  }
+
+  .wel__main {
+    background-color: #384ad321;
+    height: 140vh;
+  }
+}
+
+@media screen and (min-width: 410px) and (max-width: 414px) {
+  .wel__main {
+    background-color: #384ad321;
+    height: 110vh;
+  }
+}
+
+@media screen and (min-width: 380px) and (max-width: 390px) {
+  .wel__main {
+    background-color: #384ad321;
+    height: 110vh;
+  }
 }
