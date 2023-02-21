@@ -1,0 +1,46 @@
+.wel__main {
+  background-color: #384ad321;
+  height: 100vh;
+}
+
+.wel__info {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  top: 70px;
+}
+
+.wel__heroImage {
+  width: 600px;
+}
+
+.wel__textBlock {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 10px;
+    gap: 10px;
+  }
+
+.textBlock__h1 {
+  font-size: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #25318d;
+}
+
+.textBlock__p {
+  font-size: 20px;
+  color: #4f4f4f;
+}
+
+.callToAction {
+  width: 150px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}

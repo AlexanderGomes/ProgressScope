@@ -1,0 +1,26 @@
+.nav__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    height: 70px;
+    box-shadow: rgba(0, 0, 0, 0.25) 12px 4px 12px ;
+}
+
+.navLogo__p {
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav__signUp {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navLogo__span {
+    color: #384AD3;
+}
