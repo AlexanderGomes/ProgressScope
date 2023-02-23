@@ -1,4 +1,5 @@
 const Company = require("../schemas/company");
+const User = require("../schemas/user");
 const Code = require("../schemas/code");
 const bcrypt = require("bcryptjs");
 const crypto = require("crypto");
@@ -75,4 +76,19 @@ exports.createCode = async (req, res) => {
   });
 };
 
+exports.changeRole = async (req, res) => {
+  const { userId, newRole } = req.body;
+  const user = await User.findById(userId);
 
+  if (!user) {
+    return res.status(400).json({ msg: "user not found" });
+  }
+
+  try {
+    user.role = newRole;
+    await user.save();
+    res.status(200).json({ msg: "changed roles of user" });
+  } catch (error) {
+    res.status(400).json(error.message);
+  }
+};
