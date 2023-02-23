@@ -3,6 +3,7 @@ const Code = require("../schemas/code");
 const bcrypt = require("bcryptjs");
 const crypto = require("crypto");
 
+
 exports.registerCompany = async (req, res) => {
   const { company, email, password, employees } = req.body;
 
@@ -45,7 +46,6 @@ exports.loginCompany = async (req, res) => {
   res.status(200).json(company);
 };
 
-
 function generateSecureCode(length = 6) {
   const buffer = crypto.randomBytes(length);
   const code = buffer.toString("base64").replace(/[+\/]/g, "").slice(0, length);
@@ -53,7 +53,7 @@ function generateSecureCode(length = 6) {
 }
 
 exports.createCode = async (req, res) => {
-  const { usageLimit, role } = req.body;
+  const { usageLimit, role, companyId } = req.body;
 
   const getCode = generateSecureCode();
 
@@ -61,6 +61,7 @@ exports.createCode = async (req, res) => {
     code: getCode,
     usageLimit: usageLimit,
     role: role,
+    companyId: companyId,
   });
 
   newCode.save((err) => {
@@ -73,3 +74,5 @@ exports.createCode = async (req, res) => {
     }
   });
 };
+
+

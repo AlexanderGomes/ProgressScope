@@ -2,6 +2,11 @@ const mongoose = require("mongoose");
 
 const employeeSchema = new mongoose.Schema(
   {
+    companyId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Company",
+      required: true,
+    },
     name: {
       type: String,
       required: [true, "Please add your name"],
@@ -19,6 +24,11 @@ const employeeSchema = new mongoose.Schema(
       enum: ["employee", "manager", "HR", "owner"],
       default: "employee",
     },
+    likes: [
+      {
+        type: Number,
+      },
+    ],
   },
   { timestamps: true }
 );

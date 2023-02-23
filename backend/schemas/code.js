@@ -2,6 +2,15 @@ const mongoose = require("mongoose");
 
 const codeSchema = new mongoose.Schema(
   {
+    companyId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Company",
+      required: true,
+    },
+    teamId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Team",
+    },
     code: {
       type: String,
       required: true,
@@ -33,7 +42,9 @@ codeSchema.methods.canBeUsed = function () {
 
 // Add a method to mark the code as used by a user
 codeSchema.methods.markAsUsed = function (userId) {
-  this.usedBy.push(userId);
+  if (this.usedBy.indexOf(userId) === -1) {
+    this.usedBy.push(userId);
+  }
 };
 
 module.exports = mongoose.model("Code", codeSchema);
