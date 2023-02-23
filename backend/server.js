@@ -10,6 +10,7 @@ const userRoute = require("./routes/user");
 const reportRoute = require("./routes/report");
 const teamRoute = require("./routes/team");
 const codesRoute = require("./routes/code");
+const ratingRoute = require("./routes/rating");
 
 // middleware
 app.use(express.json());
@@ -21,6 +22,7 @@ app.use("/api/user", userRoute);
 app.use("/api/report", reportRoute);
 app.use("/api/team", teamRoute);
 app.use("/api/code", codesRoute);
+app.use("/api/rating", ratingRoute);
 
 app.listen(port, async () => {
   await db();

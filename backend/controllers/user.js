@@ -1,11 +1,8 @@
 const User = require("../schemas/user");
 const Code = require("../schemas/code");
-const Report = require("../schemas/report");
-const Team = require("../schemas/team");
 const Ratings = require("../schemas/ratings");
-const Comment = require("../schemas/comment");
 const bcrypt = require("bcryptjs");
-const crypto = require("crypto");
+
 
 
 exports.registerUser = async (req, res) => {

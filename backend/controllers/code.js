@@ -1,6 +1,8 @@
 const User = require("../schemas/user");
 const Code = require("../schemas/code");
 const Team = require("../schemas/team");
+const crypto = require("crypto");
+
 
 function generateSecureCode(length = 6) {
   const buffer = crypto.randomBytes(length);
@@ -8,7 +10,7 @@ function generateSecureCode(length = 6) {
   return code;
 }
 
-exports.codeForTeam = async (req, res) => {
+  exports.codeForTeam = async (req, res) => {
     const { usageLimit, companyId, teamId } = req.body;
   
     const getCode = generateSecureCode();
